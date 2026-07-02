@@ -1,6 +1,6 @@
-# Actuarial Pricing & Reserving Tool
+# pricing-reserving-tool
 
-A modular Python toolkit for pricing and reserving life insurance contracts, built for French actuarial practice (CEA / Institut des Actuaires standards).
+A modular Python toolkit for pricing and reserving life insurance contracts, built for French actuarial practice.
 
 ---
 
@@ -21,7 +21,7 @@ A modular Python toolkit for pricing and reserving life insurance contracts, bui
 ## Project Structure
 
 ```
-actuarial_reserves/
+pricing-reserving-tool/
 │
 ├── tables/                          # Mortality table CSV files
 │   ├── TH00_02.csv
@@ -87,7 +87,7 @@ No other dependencies. Fully offline after installation.
 Always run from the project root:
 
 ```bash
-cd actuarial_reserves
+cd pricing-reserving-tool
 python calculation.py
 ```
 
@@ -128,15 +128,15 @@ T1, T2, T3 = 1, 5, 10       # reserve calculation times
 | `"4"` | Pure endowment | Capital différé |
 | `"5"` | Whole life annuity | Rente viagère immédiate |
 | `"6"` | Deferred annuity | Rente viagère différée |
-| `"6b"` | Deferred temporary annuity | Rente temporaire différée |
 | `"7"` | Temporary annuity | Rente temporaire |
 | `"8"` | Endowment | Assurance mixte |
 | `"9"` | Endowment + contre-assurance | Capital différé avec contre-assurance |
 | `"10"` | Pension + reversion (1 beneficiary) | Rente avec réversion |
 | `"10b"` | Pension + reversion (2 beneficiaries) | Rente avec réversion plurale |
 | `"11"` | Pension + contre-assurance | Rente avec contre-assurance |
-| `"12"` | Mortgage insurance (constant capital) | Assurance emprunteur capital constant |
-| `"12b"` | Mortgage insurance (CRD) | Assurance emprunteur capital décroissant |
+| `"12"` | Deferred temporary annuity | Rente temporaire différée |
+| `"13"` | Mortgage insurance (constant capital) | Assurance emprunteur capital constant |
+| `"13b"` | Mortgage insurance (CRD) | Assurance emprunteur capital décroissant |
 
 ---
 
@@ -221,3 +221,6 @@ age;décalage
 
 ---
 
+## Author
+
+Built as part of the actuarial studies programme.
